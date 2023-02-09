@@ -1,4 +1,4 @@
 import 'products/ProductsIndex';
 import 'cart/CartIndex';
 
-console.log('this is container');
+console.log('This is Container');
