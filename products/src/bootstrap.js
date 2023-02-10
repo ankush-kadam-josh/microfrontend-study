@@ -1,12 +1,26 @@
 import faker from 'faker';
 
-let products = '';
+const mount  = (el) => {
+  let products = '';
 
-//create products from faker
-for(let i = 0;i<20;i++){
-  const name = faker.commerce.productName();
-  products+=`<div>${i+1+') '+name}</div>`
+  //create products from faker
+  for(let i = 0;i<20;i++){
+    const name = faker.commerce.productName();
+    products+=`<div>${i+1+') '+name}</div>`
+  }
+
+  //insert products to target element from html page
+  el.innerHTML=products;
 }
 
-//insert products to target element from html page
-document.querySelector('#dev-products').innerHTML=products;
+//Assuming our container doesn't have an element with id dev-products
+if(process.env.NODE_ENV === 'development'){
+  const el = document.querySelector('#dev-products'); 
+
+  if(el){
+    //We are probably running in isolation
+    mount(el);
+  }
+}
+
+export { mount }
