@@ -1,6 +1,7 @@
-import { mount as productMount} from 'products/ProductsIndex';
+import { mount as productMount } from 'products/ProductsIndex';
 import { mount as cartMount } from 'cart/CartIndex';
 
+//keep a identifier for console
 console.log('This is Container');
 
 //select and control where to mount product into

@@ -4,9 +4,9 @@ const mount  = (el) => {
   let products = '';
 
   //create products from faker
-  for(let i = 0;i<20;i++){
+  for(let i = 0;i<5;i++){
     const name = faker.commerce.productName();
-    products+=`<div>${i+1+') '+name}</div>`
+    products+=`<div style="padding: 4px">${i+1+') '+name}</div>`
   }
 
   //insert products to target element from html page
