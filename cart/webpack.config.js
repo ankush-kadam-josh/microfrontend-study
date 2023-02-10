@@ -12,7 +12,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       //expose what to share from this project
       exposes: {
-        './CartIndex': './src/index' //access path: actual path
+        './CartIndex': './src/bootstrap' //access path: actual path
       },
       /**
        * following resources added in shared, should be fetched only once while using it (say in container),
